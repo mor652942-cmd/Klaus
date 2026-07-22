@@ -61,12 +61,41 @@ pre{
     content:"► ";
 }
 
+/* Submenu */
+
+.submenu{
+    display:none;
+    margin-left:30px;
+    margin-top:-5px;
+}
+
+.submenu a{
+    display:block;
+    margin:8px 0;
+    color:#00ff66;
+    text-decoration:none;
+    font-size:20px;
+    text-shadow:0 0 4px #00ff66;
+}
+
+.submenu a::before{
+    content:"> ";
+}
+
+.submenu a:hover{
+    color:#fff;
+    text-shadow:0 0 10px #fff;
+}
+
+.submenu a:hover::before{
+    content:"► ";
+}
+
 ::selection{
     background:#00ff66;
     color:#000;
 }
 </style>
-
 </head>
 <body>
 
@@ -80,13 +109,45 @@ pre{
 =====================================</pre>
 
 <div class="menu">
+
     <a href="#">[ Download ]</a>
-    <a href="#">[ Builds ]</a>
+
+    <a href="#" id="buildsBtn" onclick="toggleBuilds(); return false;">
+        [ Builds ]
+    </a>
+
+    <div class="submenu" id="builds">
+        <a href="#">1.1.2026</a>
+        <a href="#">1.2.2026</a>
+        <a href="#">1.3.2026</a>
+        <a href="#">1.4.2026</a>
+        <a href="#">1.5.2026</a>
+        <a href="#">1.6.2026</a>
+        <a href="#">1.7.2026</a>
+    </div>
+
     <a href="#">[ Documentação ]</a>
+
     <a href="#">[ Sobre ]</a>
+
 </div>
 
 </div>
+
+<script>
+function toggleBuilds() {
+    const submenu = document.getElementById("builds");
+    const botao = document.getElementById("buildsBtn");
+
+    if (submenu.style.display === "block") {
+        submenu.style.display = "none";
+        botao.innerHTML = "[ Builds ]";
+    } else {
+        submenu.style.display = "block";
+        botao.innerHTML = "▼ [ Builds ]";
+    }
+}
+</script>
 
 </body>
 </html>
