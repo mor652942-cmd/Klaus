@@ -16,86 +16,80 @@ body{
     background:#000;
     color:#00ff66;
     font-family:Consolas,"Courier New",monospace;
+    text-shadow:0 0 5px #00ff66;
     display:flex;
     justify-content:center;
     align-items:center;
     min-height:100vh;
-    text-shadow:0 0 4px #00ff66;
 }
 
 .terminal{
     width:700px;
-    padding:20px;
 }
 
 pre{
     font-size:20px;
     line-height:1.6;
     white-space:pre;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
-.menu{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-.menu a{
-    color:#00ff66;
-    text-decoration:none;
-    font-size:20px;
-    transition:.2s;
-}
-
-.menu a::before{
-    content:"> ";
-}
-
-.menu a:hover{
-    color:#fff;
-    text-shadow:0 0 10px #fff;
-}
-
-.menu a:hover::before{
-    content:"► ";
-}
-
-/* Submenu */
-
-.submenu{
-    display:none;
-    margin-left:30px;
-    margin-top:-5px;
-}
-
+.menu a,
 .submenu a{
     display:block;
-    margin:8px 0;
     color:#00ff66;
     text-decoration:none;
     font-size:20px;
-    text-shadow:0 0 4px #00ff66;
+    margin:8px 0;
 }
 
+.menu a::before,
 .submenu a::before{
     content:"> ";
 }
 
+.menu a:hover,
 .submenu a:hover{
     color:#fff;
     text-shadow:0 0 10px #fff;
 }
 
+.menu a:hover::before,
 .submenu a:hover::before{
     content:"► ";
 }
 
-::selection{
-    background:#00ff66;
-    color:#000;
+.submenu{
+    display:none;
+    margin-left:30px;
+}
+
+.build-info{
+    display:none;
+    margin-left:30px;
+    margin-top:10px;
+}
+
+.build-info p{
+    margin:8px 0;
+    font-size:18px;
+}
+
+.build-info a{
+    color:#00ff66;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.build-info a::before{
+    content:"> ";
+}
+
+.build-info a:hover{
+    color:#fff;
 }
 </style>
+
 </head>
 <body>
 
@@ -110,42 +104,54 @@ pre{
 
 <div class="menu">
 
-    <a href="#">[ Download ]</a>
+<a href="#">[ Download ]</a>
 
-    <a href="#" id="buildsBtn" onclick="toggleBuilds(); return false;">
-        [ Builds ]
-    </a>
+<a href="#" onclick="toggleBuilds();return false;">[ Builds ]</a>
 
-    <div class="submenu" id="builds">
-        <a href="#">1.1.2026</a>
-        <a href="#">1.2.2026</a>
-        <a href="#">1.3.2026</a>
-        <a href="#">1.4.2026</a>
-        <a href="#">1.5.2026</a>
-        <a href="#">1.6.2026</a>
-        <a href="#">1.7.2026</a>
-    </div>
+<div class="submenu" id="builds">
 
-    <a href="#">[ Documentação ]</a>
+<a href="#">1.1.2026</a>
+<a href="#">1.2.2026</a>
+<a href="#">1.3.2026</a>
+<a href="#">1.4.2026</a>
+<a href="#">1.5.2026</a>
+<a href="#">1.6.2026</a>
 
-    <a href="#">[ Sobre ]</a>
+<a href="#" onclick="toggle170();return false;">1.7.2026</a>
+
+<div class="build-info" id="info170">
+
+<p>Notas da build:</p>
+
+<p>1° Ainda ao digitar <b>"reiniciar"</b> ele reinicia.</p>
+
+<p>2° O Shell está com cara de terminal.</p>
+
+<br>
+
+<a href="Klaus-1.7.2026.img" download>[ 📥 Download ]</a>
+
+</div>
+
+</div>
+
+<a href="#">[ Documentação ]</a>
+
+<a href="#">[ Sobre ]</a>
 
 </div>
 
 </div>
 
 <script>
-function toggleBuilds() {
-    const submenu = document.getElementById("builds");
-    const botao = document.getElementById("buildsBtn");
+function toggleBuilds(){
+    const menu=document.getElementById("builds");
+    menu.style.display=(menu.style.display==="block")?"none":"block";
+}
 
-    if (submenu.style.display === "block") {
-        submenu.style.display = "none";
-        botao.innerHTML = "[ Builds ]";
-    } else {
-        submenu.style.display = "block";
-        botao.innerHTML = "▼ [ Builds ]";
-    }
+function toggle170(){
+    const info=document.getElementById("info170");
+    info.style.display=(info.style.display==="block")?"none":"block";
 }
 </script>
 
