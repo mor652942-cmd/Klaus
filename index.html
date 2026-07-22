@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klaus</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#00ff66;
+    font-family:Consolas,"Courier New",monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    text-shadow:0 0 4px #00ff66;
+}
+
+.terminal{
+    width:700px;
+    padding:20px;
+}
+
+pre{
+    font-size:20px;
+    line-height:1.6;
+    white-space:pre;
+    margin-bottom:25px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.menu a{
+    color:#00ff66;
+    text-decoration:none;
+    font-size:20px;
+    transition:.2s;
+}
+
+.menu a::before{
+    content:"> ";
+}
+
+.menu a:hover{
+    color:#fff;
+    text-shadow:0 0 10px #fff;
+}
+
+.menu a:hover::before{
+    content:"► ";
+}
+
+::selection{
+    background:#00ff66;
+    color:#000;
+}
+</style>
+
+</head>
+<body>
+
+<div class="terminal">
+
+<pre>=====================================
+            Klaus
+ Sistema atual: Klaus 1
+ Versão atual: 26k1
+ Build atual: 1.7.2026
+=====================================</pre>
+
+<div class="menu">
+    <a href="#">[ Download ]</a>
+    <a href="#">[ Builds ]</a>
+    <a href="#">[ Documentação ]</a>
+    <a href="#">[ Sobre ]</a>
+</div>
+
+</div>
+
+</body>
+</html>
