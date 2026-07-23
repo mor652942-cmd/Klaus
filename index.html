@@ -198,14 +198,7 @@ pre{
 
     <a href="#" onclick="toggleSobre();return false;">[ Sobre o projeto ]</a>
 
-    <div class="build-info" id="sobre">
-
-        <p><b>Projeto Klaus</b></p>
-
-        <br>
-
-        <p>
-           <div class="build-info" id="sobre">
+ <div class="build-info" id="sobre">
 
 <p><b>Klaus</b></p>
 
@@ -233,7 +226,7 @@ pre{
 
 <p><b>Arquitetura</b></p>
 
-<p>BIOS liga a máquina &gt; boot.asm (setor de boot, 512 bytes, endereço 0x7C00) <i>*lê do disco e carrega em memória*</i> &gt; kernel.asm (endereço 0x10000, modo protegido 32 bits) <i>*passa o controle*</i> &gt; shell.asm (endereço 0x20000, lê teclado, interpreta comandos).</p>
+<p>BIOS liga a máquina &gt; boot.asm (setor de boot, 512 bytes, endereço 0x7C00) <i>lê do disco e carrega em memória</i> &gt; kernel.asm (endereço 0x10000, modo protegido 32 bits) <i>passa o controle</i> &gt; shell.asm (endereço 0x20000, lê teclado, interpreta comandos).</p>
 
 <br>
 
@@ -259,8 +252,6 @@ pre{
 
 <p>Projeto pessoal de aprendizado, construído passo a passo — cada peça (boot, modo protegido, kernel, leitura de disco, teclado, comandos) foi implementada e testada individualmente antes de avançar para a próxima.</p>
 
-</div>
-       
 </div>
 <script>
 function toggleBuilds(){
