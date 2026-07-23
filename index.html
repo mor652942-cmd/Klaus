@@ -104,112 +104,118 @@ pre{
 
 <div class="menu">
 
-<a href="build_1_7_2026.img" download>[ Download da build mais atual ]</a>
+    <a href="build_1_7_2026.img" download>[ Download da build mais atual ]</a>
 
-<a href="#" onclick="toggleBuilds();return false;">[ Builds - Notas e Download ]</a>
+    <a href="#" onclick="toggleBuilds();return false;">[ Builds - Notas e Download ]</a>
 
-<div class="submenu" id="builds">
+    <div class="submenu" id="builds">
 
-    <a href="#" onclick="toggle110();return false;">1.1.2026</a>
-    <div class="build-info" id="info110">
-        <p>Notas da build:</p>
-        <p>Só inicia o boot com o nome do sistema e build.</p>
-        <br>
-        <a href="build_1_1_2026.img" download>[ 📥 Download ]</a>
+        <!-- Todas as builds aqui -->
+
+        <a href="#" onclick="toggle110();return false;">1.1.2026</a>
+        <div class="build-info" id="info110">
+            <p>Notas da build:</p>
+            <p>Só inicia o boot com o nome do sistema e build.</p>
+            <br>
+            <a href="build_1_1_2026.img" download>[ 📥 Download ]</a>
+        </div>
+
+        <a href="#" onclick="toggle120();return false;">1.2.2026</a>
+        <div class="build-info" id="info120">
+            <p>Notas da build:</p>
+            <p>Coloca o processador para entrar em modo protegido de 32 bits.</p>
+            <br>
+            <a href="build_1_2_2026.img" download>[ 📥 Download ]</a>
+        </div>
+
+        <a href="#" onclick="toggle130();return false;">1.3.2026</a>
+        <div class="build-info" id="info130">
+            <p>Notas da build:</p>
+            <p>Introduz um kernel.</p>
+            <br>
+            <a href="build_1_3_2026.img" download>[ 📥 Download ]</a>
+        </div>
+
+        <a href="#" onclick="toggle140();return false;">1.4.2026</a>
+        <div class="build-info" id="info140">
+            <p>Notas da build:</p>
+            <p>Foi feito um shell que é aberto pelo kernel.</p>
+            <br>
+            <a href="build_1_4_2026.img" download>[ 📥 Download ]</a>
+        </div>
+
+        <a href="#" onclick="toggle150();return false;">1.5.2026</a>
+        <div class="build-info" id="info150">
+            <p>Notas da build:</p>
+            <p>Agora o shell reconhece teclado.</p>
+            <br>
+            <a href="build_1_5_2026.img" download>[ 📥 Download ]</a>
+        </div>
+
+        <a href="#" onclick="toggle160();return false;">1.6.2026</a>
+        <div class="build-info" id="info160">
+            <p>Notas da build:</p>
+            <p>Ao digitar "REINICIAR" e apertar Enter ele reinicia.</p>
+            <br>
+            <a href="build_1_6_2026.img" download>[ 📥 Download ]</a>
+        </div>
+
+        <a href="#" onclick="toggle170();return false;">1.7.2026</a>
+        <div class="build-info" id="info170">
+            <p>Notas da build:</p>
+            <p>O shell está com cara de terminal.</p>
+            <br>
+            <a href="build_1_7_2026.img" download>[ 📥 Download ]</a>
+        </div>
+
     </div>
 
-    <a href="#" onclick="toggle120();return false;">1.2.2026</a>
-    <div class="build-info" id="info120">
-        <p>Notas da build:</p>
-        <p>Coloca o processador para entrar em modo protegido de 32 bits</p>
-        <br>
-        <a href="build_1_2_2026.img" download>[ 📥 Download ]</a>
+    <a href="#" onclick="toggleCodigo();return false;">[ Codigo fonte das Builds ]</a>
+
+    <div class="submenu" id="codigo">
+
+        <a href="#" onclick="toggleCodigo170();return false;">1.7.2026</a>
+
+        <div class="build-info" id="codigo170">
+
+            <p>Arquivos da build:</p>
+
+            <a href="https://github.com/mor652942-cmd/Klaus/blob/main/boot_1_7_2026.asm" target="_blank">
+                [ 📄 boot_1_7_2026.asm ]
+            </a>
+
+            <a href="https://github.com/mor652942-cmd/Klaus/blob/main/kernel_1_7_2026.asm" target="_blank">
+                [ 📄 kernel_1_7_2026.asm ]
+            </a>
+
+            <a href="https://github.com/mor652942-cmd/Klaus/blob/main/shell_1_7_2026.asm" target="_blank">
+                [ 📄 shell_1_7_2026.asm ]
+            </a>
+
+        </div>
+
     </div>
 
-    <a href="#" onclick="toggle130();return false;">1.3.2026</a>
-    <div class="build-info" id="info130">
-        <p>Notas da build:</p>
-        <p>Indroduz um kernel.</p>
-        <br>
-        <a href="build_1_3_2026.img" download>[ 📥 Download ]</a>
-    </div>
+    <a href="#" onclick="toggleSobre();return false;">[ Sobre o projeto ]</a>
 
-    <a href="#" onclick="toggle140();return false;">1.4.2026</a>
-    <div class="build-info" id="info140">
-        <p>Notas da build:</p>
-        <p>Foi Feito um shell que é aberto pelo kernel.</p>
-        <br>
-        <a href="build_1_4_2026.img" download>[ 📥 Download ]</a>
-    </div>
+    <div class="build-info" id="sobre">
 
-    <a href="#" onclick="toggle150();return false;">1.5.2026</a>
-    <div class="build-info" id="info150">
-        <p>Notas da build:</p>
-        <p>Agora o shell reconhece teclado</p>
-        <br>
-        <a href="build_1_5_2026.img" download>[ 📥 Download ]</a>
-    </div>
+        <p><b>Projeto Klaus</b></p>
 
-    <a href="#" onclick="toggle160();return false;">1.6.2026</a>
-    <div class="build-info" id="info160">
-        <p>Notas da build:</p>
-        <p>Ao digitar 'REINICIAR' e apertar em 'enter' ele reinicia</p>
         <br>
-        <a href="build_1_6_2026.img" download>[ 📥 Download ]</a>
-    </div>
 
-    <a href="#" onclick="toggle170();return false;">1.7.2026</a>
-    <div class="build-info" id="info170">
-        <p>Notas da build:</p>
-        <p>O Shell está com cara de terminal.</p>
-        <br>
-        <a href="build_1_7_2026.img" download>[ 📥 Download ]</a>
+        <p>
+            O Klaus é um projeto de sistema operacional que estou desenvolvendo
+            para aprender mais sobre o funcionamento dos computadores.
+            A ideia é evoluir o projeto aos poucos, aprendendo com os erros,
+            testando novas ideias e colocando em prática tudo o que estudo.
+            O objetivo é ganhar experiência e entender como um sistema
+            operacional funciona desde o boot até o kernel.
+        </p>
+
     </div>
 
 </div>
-
-</div>
-
-   <a href="#" onclick="toggleCodigo();return false;">[ Codigo fonte das Builds ]</a>
-
-<div class="submenu" id="codigo">
-
-    <a href="#" onclick="toggleCodigo170();return false;">1.7.2026</a>
-
-    <div class="build-info" id="codigo170">
-
-    <p>Arquivos da build:</p>
-
-    <a href="https://github.com/mor652942-cmd/Klaus/blob/main/boot_1_7_2026.asm" target="_blank">
-        [ 📄 boot_1_7_2026.asm ]
-    </a>
-
-    <a href="https://github.com/mor652942-cmd/Klaus/blob/main/kernel_1_7_2026.asm" target="_blank">
-        [ 📄 kernel_1_7_2026.asm ]
-    </a>
-
-    <a href="https://github.com/mor652942-cmd/Klaus/blob/main/shell_1_7_2026.asm" target="_blank">
-        [ 📄 shell_1_7_2026.asm ]
-    </a>
-
-</div>
-
-</div>
-
-<a href="#" onclick="toggleSobre();return false;">[ Sobre o projeto ]</a>
-
-<div class="build-info" id="sobre">
-
-<p><b>Projeto Klaus</b></p>
-
-<br>
-
-<p>O Klaus é um projeto de sistema operacional que estou desenvolvendo para aprender mais sobre o funcionamento dos computadores. A ideia é evoluir o projeto aos poucos, sem pressa, aprendendo com os erros, testando novas ideias e colocando em prática tudo o que vou estudando. Este não é um projeto com a intenção de competir com sistemas já existentes. O objetivo é ganhar experiência, entender como um sistema operacional funciona desde o boot até o kernel e acompanhar a evolução do projeto a cada nova versão. Ainda há muito trabalho pela frente, mas faz parte da jornada. Cada linha de código escrita representa um novo aprendizado e um passo a mais no desenvolvimento do Klaus.</p>
-
-</div>
-    
-</div>
-
 <script>
 function toggleBuilds(){
     const e = document.getElementById("builds");
