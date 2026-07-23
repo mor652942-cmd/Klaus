@@ -205,63 +205,62 @@ pre{
         <br>
 
         <p>
-            # Klaus
+           <div class="build-info" id="sobre">
 
-Klaus é um sistema operacional escrito do zero, em Assembly x86, como
-projeto de aprendizado sobre como sistemas operacionais realmente
-funcionam por baixo dos panos — sem frameworks, sem bibliotecas, sem
-nada além do processador e da BIOS.
+<p><b>Klaus</b></p>
 
-O que já funciona:
+<br>
 
-- Bootloader (boot/boot.asm) — o primeiro código a rodar na
-  máquina, carregado pela BIOS. Lê o kernel e o shell do disco,
-  habilita a linha A20, monta uma GDT e faz a virada de modo real
-  (16 bits) para modo protegido (32 bits).
-- Kernel (Kernel/kernel.asm) — carregado pelo bootloader,
-  roda em modo protegido e repassa o controle para o shell.
-- Shell (Shell/shell.asm) — a interface com quem usa o Klaus.
-  Lê o teclado diretamente via I/O de baixo nível (sem depender de
-  BIOS, já que em modo protegido essas chamadas não existem mais),
-  ecoa o que é digitado na tela, mantém um prompt fixo (klaus>) e
-  reconhece comandos.
+<p>Klaus é um sistema operacional escrito do zero, em Assembly x86, como projeto de aprendizado sobre como sistemas operacionais realmente funcionam por baixo dos panos — sem frameworks, sem bibliotecas, sem nada além do processador e da BIOS.</p>
 
-Comandos disponíveis
+<br>
 
-Comando1: `reiniciar` > Reinicia a máquina de verdade, via reset de hardware pelo controlador de teclado 
+<p><b>O que já funciona:</b></p>
 
-Arquitetura
+<p>- Bootloader (boot/boot.asm) — o primeiro código a rodar na máquina, carregado pela BIOS. Lê o kernel e o shell do disco, habilita a linha A20, monta uma GDT e faz a virada de modo real (16 bits) para modo protegido (32 bits).</p>
 
-BIOS liga a maquina > boot.asm (setor de boot, 512 bytes, endereco 0x7C00) *le do disco e carrega em memoria* > 
-> kernel.asm (endereco 0x10000, modo protegido 32 bits) *passa o controle* > shell.asm (endereco 0x20000, le teclado, interpreta comandos)
+<p>- Kernel (Kernel/kernel.asm) — carregado pelo bootloader, roda em modo protegido e repassa o controle para o shell.</p>
 
-Cada estágio é compilado separadamente e depois concatenado em uma
-única imagem de disco (.img), na ordem: boot → kernel → shell.
+<p>- Shell (Shell/shell.asm) — a interface com quem usa o Klaus. Lê o teclado diretamente via I/O de baixo nível (sem depender de BIOS, já que em modo protegido essas chamadas não existem mais), ecoa o que é digitado na tela, mantém um prompt fixo (<b>klaus&gt;</b>) e reconhece comandos.</p>
 
-Como é compilado e testado
+<br>
 
-O projeto já vem com uma task configurada para o VS Code — basta
-abrir a pasta no editor e apertar Ctrl+Shift+B. Isso monta os
-três estágios com o NASM, concentra tudo em uma imagem de disco e
-abre o resultado no QEMU automaticamente.
+<p><b>Comandos disponíveis</b></p>
 
-Testando em hardware real
+<p>Comando1: <code>reiniciar</code> &gt; Reinicia a máquina de verdade, via reset de hardware pelo controlador de teclado.</p>
 
-O Klaus usa um bootloader clássico de setor MBR (BIOS Legada), então
-só funciona em máquinas com suporte a boot Legacy/CSM habilitado na
-BIOS. Notebooks modernos com UEFI puro (sem CSM) não conseguem
-bootar essa imagem sem suporte adicional.
+<br>
 
-Sobre
+<p><b>Arquitetura</b></p>
 
-Projeto pessoal de aprendizado, construído passo a passo — cada
-peça (boot, modo protegido, kernel, leitura de disco, teclado,
-comandos) foi implementada e testada individualmente antes de
-avançar para a próxima.
-        </p>
+<p>BIOS liga a máquina &gt; boot.asm (setor de boot, 512 bytes, endereço 0x7C00) <i>*lê do disco e carrega em memória*</i> &gt; kernel.asm (endereço 0x10000, modo protegido 32 bits) <i>*passa o controle*</i> &gt; shell.asm (endereço 0x20000, lê teclado, interpreta comandos).</p>
 
-    </div>
+<br>
 
+<p>Cada estágio é compilado separadamente e depois concentrado em uma única imagem de disco (.img), na ordem:</p>
+
+<p><b>boot → kernel → shell.</b></p>
+
+<br>
+
+<p><b>Como é compilado e testado</b></p>
+
+<p>O projeto já vem com uma configuração para o VS Code: basta abrir a pasta no editor e apertar <b>Ctrl+Shift+B</b>. Isso monta os três estágios com o NASM, concentra tudo em uma imagem de disco e abre o resultado no QEMU automaticamente.</p>
+
+<br>
+
+<p><b>Testando em hardware real</b></p>
+
+<p>O Klaus usa um bootloader clássico de setor MBR (BIOS Legada), então só funciona em máquinas com suporte a boot Legacy/CSM habilitado na BIOS. Notebooks modernos com UEFI puro (sem CSM) não conseguem bootar essa imagem sem suporte adicional.</p>
+
+<br>
+
+<p><b>Sobre</b></p>
+
+<p>Projeto pessoal de aprendizado, construído passo a passo — cada peça (boot, modo protegido, kernel, leitura de disco, teclado, comandos) foi implementada e testada individualmente antes de avançar para a próxima.</p>
+
+</div>
+       
 </div>
 <script>
 function toggleBuilds(){
